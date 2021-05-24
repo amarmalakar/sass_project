@@ -1,0 +1,42 @@
+.contact__page {
+    padding: 30px 15px;
+    @include wrapper(524px);
+
+    h1, h2, h3 {
+        font-family: $primary__font;
+        margin-bottom: 15px;
+    }
+
+    form {
+        .form__input {
+            margin-bottom: 15px;
+            label {
+                @include article;
+                display: block;
+                margin-bottom: 0;
+            }
+            input, textarea {
+                padding: 8px 16px;
+                width: 100%;
+                font-family: $primary__font;
+                font-weight: 300;
+            }
+            textarea {
+                height: 100px;
+            }
+            input[type=submit] {
+                width: auto;
+                color: #fff;
+                background-color: $f__color;
+                border: none;
+                font-size: 18px;
+                padding: 12px 24px;
+                font-weight: 500;
+                &:hover {
+                    background-color: $s__color;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

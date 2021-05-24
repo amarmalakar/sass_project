@@ -1,0 +1,32 @@
+.about__page {
+    padding: 30px 15px;
+    @include wrapper(768px);
+
+    h1, h2, h3 {
+        font-family: $primary__font;
+        margin-bottom: 15px;
+    }
+    p {
+        @include article;
+    }
+
+    .author__1, .author__2 {
+        margin: 45px auto;
+        img {
+            width: 200px;
+            box-shadow: 10px 10px 40px rgba($color: #000000, $alpha: 0.5);
+        }
+    }
+    .author__1 {
+        @include flex(flex, space-between, row, center);
+        img {
+            margin-right: 60px;
+        }
+    }
+    .author__2 {
+        @include flex(flex, space-between, row-reverse, center);
+        img {
+            margin-left: 60px;
+        }
+    }
+}

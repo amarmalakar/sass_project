@@ -1,0 +1,27 @@
+@mixin flex ($d, $jc, $fd, $ai) {
+    display: $d;
+    justify-content: $jc;
+    flex-direction: $fd;
+    align-items: $ai;
+}
+
+@mixin wrapper ($mw) {
+    max-width: $mw;
+    margin: 0 auto;
+}
+
+@mixin article {
+    font-size: 18px;
+    font-family: $secondary__font;
+    line-height: 2;
+    margin-bottom: 30px;
+
+    a {
+        color: $f__color;
+        text-decoration: none;
+        font-weight: bold;
+        &:hover {
+            color: $s__color;
+        }
+    }
+}
