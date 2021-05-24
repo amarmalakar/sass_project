@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import "variables";
+@import "mixins";
+
+.wrapper {
+    @include wrapper(996px);
+}
+
+.btn {
+    background-color: $f__color;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+        background-color: $s__color;
+    }
+}
+
+.header {
+    nav {
+        @include flex(flex, space-between, row, center);
+        padding: 15px;
+
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            font-family: $primary__font;
+            font-weight: 500;
+            color: #333;
+            &:hover {
+                color: $f__color;
+            }
+        }
+        .brand__nav__link {
+            font-family: $brand__font;
+            font-size: 30px;
+        }
+
+        .brand__nav__link {
+            font-weight: 500;
+        }
+
+        ul {
+            @include flex(flex, space-between, row, center);
+            list-style: none;
+
+            li {
+
+                a {
+                    padding: 8px 8px;
+                }
+            }
+        }
+    }
+
+    .main__banner {
+        width: 100%;
+        height: 350px;
+        background-image: url(../images/pexels-pixabay-261662.jpg);
+        background-size: cover;
+        background-position: center;
+
+        main {
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.7);
+            padding: 30px;
+
+            @include flex(flex, center, column, center);
+            color: #fff;
+
+            .header__max {
+                @include wrapper(726px);
+
+                h1 {
+                    font-size: 30px;
+                    font-family: $primary__font;
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    text-align: justify;
+                    font-size: 18px;
+                    font-family: $secondary__font;
+                }
+            }
+        }
+    }
+}
+
+.home__blog__lists {
+    margin: 45px auto;
+    @include flex(flex, space-between, none, center);
+    @include wrapper (996px);
+    flex-wrap: wrap;
+    padding: 15px;
+    .home__blog__list {
+        max-width: 32%;
+        margin: 15px 0;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+        padding: 15px 15px 30px 15px;
+
+        img {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        div {
+            font-family: $secondary__font;
+
+            h3 {
+                font-family: $primary__font;
+                margin-bottom: 15px;
+            }
+
+            p {
+                margin-bottom: 30px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $f__color;
+    font-family: $brand__font;
+    padding: 30px 15px;
+    text-align: center;
+    color: #fff;
+}
+
+@import "blog__page";
+@import "about__page";
+@import "contact__page";
+@import "media__queries";
